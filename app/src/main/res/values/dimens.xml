@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="textSize">30dp</dimen>
+    <dimen name="textSizeView">35dp</dimen>
     <dimen name="margin_button">3dp</dimen>
     <dimen name="button_widht">80dp</dimen>
     <dimen name="button_height">80dp</dimen>
