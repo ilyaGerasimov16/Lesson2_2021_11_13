@@ -2,7 +2,6 @@ package com.example.lesson2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -109,35 +108,29 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initButtonDigitClickListener(Button but, String valueButton) {
-        but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton);
-                currentValue = currentValue + valueButton;
-            }
+        but.setOnClickListener(view -> {
+            setTextButton(currentValue + valueButton);
+            currentValue = currentValue + valueButton;
         });
     }
 
     private void initButtonActionClickListener(Button but, int currentAct) {
 
-        but.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    if (currentValue.equals("")&& but.equals(buttonSub)) {
-                        currentValue = "-";
-                    } else {
-                        currentAction = currentAct;
-                        arg1 = Double.parseDouble(currentValue);
-                        currentValue = "";
-                    }
-                    setTextButton(currentValue);
-                }
-                catch (Exception e) {
+        but.setOnClickListener(view -> {
+            try {
+                if (currentValue.equals("")&& but.equals(buttonSub)) {
+                    currentValue = "-";
+                } else {
+                    currentAction = currentAct;
+                    arg1 = Double.parseDouble(currentValue);
                     currentValue = "";
                 }
-
+                setTextButton(currentValue);
             }
+            catch (Exception e) {
+                currentValue = "";
+            }
+
         });
     }
 
@@ -146,30 +139,27 @@ public class MainActivity extends AppCompatActivity {
     private void initButtonResultClickListener() {
         Button buttonResult = findViewById(R.id.buttonResult);
 
-        buttonResult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (currentValue.equals("")) {
-                    setTextButton("0");
-                } else {
-                    arg2 = Double.parseDouble(currentValue);
-                    currentValue = "";
+        buttonResult.setOnClickListener(view -> {
+            if (currentValue.equals("")) {
+                setTextButton("0");
+            } else {
+                arg2 = Double.parseDouble(currentValue);
+                currentValue = "";
 
-                    switch (currentAction) {
-                        case 1: result = arg1 + arg2;
-                            break;
-                        case 2: result = arg1 - arg2;
-                            break;
-                        case 3: result = arg1 * arg2;
-                            break;
-                        case 4: result = arg1 / arg2;
-                            break;
-                        default: result = 0.0;
-                            break;
-                    }
-                    String res = Double.toString(result);
-                    setTextButton(res);
+                switch (currentAction) {
+                    case 1: result = arg1 + arg2;
+                        break;
+                    case 2: result = arg1 - arg2;
+                        break;
+                    case 3: result = arg1 * arg2;
+                        break;
+                    case 4: result = arg1 / arg2;
+                        break;
+                    default: result = 0.0;
+                        break;
                 }
+                String res = Double.toString(result);
+                setTextButton(res);
             }
         });
     }
