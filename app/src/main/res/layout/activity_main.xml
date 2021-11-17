@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button1"
         android:text="@string/button_1"
         app:layout_constraintBottom_toTopOf="@+id/button4"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
         android:text="@string/button_2"
         app:layout_constraintBottom_toTopOf="@+id/button5"
@@ -29,7 +29,7 @@
         app:layout_constraintVertical_chainStyle="packed"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
         android:text="@string/button_3"
         app:layout_constraintBottom_toTopOf="@+id/button6"
@@ -39,7 +39,7 @@
         app:layout_constraintVertical_chainStyle="packed"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button4"
         android:text="@string/button_4"
         app:layout_constraintBottom_toTopOf="@+id/button7"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button1"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button5"
         android:text="@string/button_5"
         app:layout_constraintBottom_toTopOf="@+id/button8"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button2"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
         android:text="@string/button_6"
         app:layout_constraintBottom_toTopOf="@+id/button9"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button3"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button7"
         android:text="@string/button_7"
         app:layout_constraintBottom_toTopOf="@+id/button0"
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button4"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button8"
         android:text="@string/button_8"
         app:layout_constraintBottom_toTopOf="@+id/buttonPoint"
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button5"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button9"
         android:text="@string/button_9"
         app:layout_constraintBottom_toTopOf="@+id/buttonResult"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button6"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button0"
         android:text="@string/button_0"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -105,7 +105,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button7"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonPoint"
         android:text="@string/button_point"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,8 +114,9 @@
         app:layout_constraintTop_toBottomOf="@+id/button8"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonResult"
+        app:backgroundTint = "@color/purple_700"
         android:text="@string/button_result"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
@@ -123,8 +124,9 @@
         app:layout_constraintTop_toBottomOf="@+id/button9"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonAdd"
+        app:backgroundTint = "@color/teal_700"
         android:text="@string/button_add"
         app:layout_constraintBottom_toTopOf="@+id/buttonSub"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,8 +135,9 @@
         app:layout_constraintTop_toTopOf="parent"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSub"
+        app:backgroundTint = "@color/teal_700"
         android:text="@string/button_sub"
         app:layout_constraintBottom_toTopOf="@+id/buttonMul"
         app:layout_constraintEnd_toEndOf="parent"
@@ -142,8 +145,9 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonAdd"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonMul"
+        app:backgroundTint = "@color/teal_700"
         android:text="@string/button_mul"
         app:layout_constraintBottom_toTopOf="@+id/buttonDiv"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,8 +155,9 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSub"
         style="@style/MyCalcStyle"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonDiv"
+        app:backgroundTint = "@color/teal_700"
         android:text="@string/button_div"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
