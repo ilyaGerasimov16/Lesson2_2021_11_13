@@ -12,17 +12,17 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
 
-    String VALUEBUTTON1 ="1";
-    String VALUEBUTTON2 ="2";
-    String VALUEBUTTON3 ="3";
-    String VALUEBUTTON4 ="4";
-    String VALUEBUTTON5 ="5";
-    String VALUEBUTTON6 ="6";
-    String VALUEBUTTON7 ="7";
-    String VALUEBUTTON8 ="8";
-    String VALUEBUTTON9 ="9";
-    String VALUEBUTTON0 ="0";
-    String VALUEBUTTONPOINT =".";
+    String valueButton1 ="1";
+    String valueButton2 ="2";
+    String valueButton3 ="3";
+    String valueButton4 ="4";
+    String valueButton5 ="5";
+    String valueButton6 ="6";
+    String valueButton7 ="7";
+    String valueButton8 ="8";
+    String valueButton9 ="9";
+    String valueButton0 ="0";
+    String valueButtonPoint =".";
 
     String currentValue = "";
     int currentAction = 0; // 1 - сложение; 2 - вычитание; 3 - умножение; 4 - деление;
@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON1);
-                currentValue = currentValue + VALUEBUTTON1;
+                setTextButton(currentValue + valueButton1);
+                currentValue = currentValue + valueButton1;
 
             }
         });
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON2);
-                currentValue = currentValue + VALUEBUTTON2;
+                setTextButton(currentValue + valueButton2);
+                currentValue = currentValue + valueButton2;
             }
         });
     }
@@ -101,8 +101,8 @@ public class MainActivity extends AppCompatActivity {
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON3);
-                currentValue = currentValue + VALUEBUTTON3;
+                setTextButton(currentValue + valueButton3);
+                currentValue = currentValue + valueButton3;
             }
         });
     }
@@ -113,8 +113,8 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON4);
-                currentValue = currentValue + VALUEBUTTON4;
+                setTextButton(currentValue + valueButton4);
+                currentValue = currentValue + valueButton4;
             }
         });
     }
@@ -125,8 +125,8 @@ public class MainActivity extends AppCompatActivity {
         button5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON5);
-                currentValue = currentValue + VALUEBUTTON5;
+                setTextButton(currentValue + valueButton5);
+                currentValue = currentValue + valueButton5;
             }
         });
     }
@@ -137,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
         button6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON6);
-                currentValue = currentValue + VALUEBUTTON6;
+                setTextButton(currentValue + valueButton6);
+                currentValue = currentValue + valueButton6;
             }
         });
     }
@@ -149,8 +149,8 @@ public class MainActivity extends AppCompatActivity {
         button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON7);
-                currentValue = currentValue + VALUEBUTTON7;
+                setTextButton(currentValue + valueButton7);
+                currentValue = currentValue + valueButton7;
             }
         });
     }
@@ -161,8 +161,8 @@ public class MainActivity extends AppCompatActivity {
         button8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON8);
-                currentValue = currentValue + VALUEBUTTON8;
+                setTextButton(currentValue + valueButton8);
+                currentValue = currentValue + valueButton8;
             }
         });
     }
@@ -173,8 +173,8 @@ public class MainActivity extends AppCompatActivity {
         button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON9);
-                currentValue = currentValue + VALUEBUTTON9;
+                setTextButton(currentValue + valueButton9);
+                currentValue = currentValue + valueButton9;
             }
         });
     }
@@ -185,8 +185,8 @@ public class MainActivity extends AppCompatActivity {
         button0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTON0);
-                currentValue = currentValue + VALUEBUTTON0;
+                setTextButton(currentValue + valueButton0);
+                currentValue = currentValue + valueButton0;
             }
         });
     }
@@ -198,8 +198,8 @@ public class MainActivity extends AppCompatActivity {
         buttonPoint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setTextButton(currentValue + VALUEBUTTONPOINT);
-                currentValue = currentValue + VALUEBUTTONPOINT;
+                setTextButton(currentValue + valueButtonPoint);
+                currentValue = currentValue + valueButtonPoint;
             }
         });
     }
@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (currentValue == "") {
+                if (currentValue.equals("")) {
                     currentValue = "-";
                     setTextButton(currentValue);
                 } else {
