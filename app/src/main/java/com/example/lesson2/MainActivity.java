@@ -2,7 +2,6 @@ package com.example.lesson2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -24,6 +23,23 @@ public class MainActivity extends AppCompatActivity {
     String valueButton0 ="0";
     String valueButtonPoint =".";
 
+    Button button1;
+    Button button2;
+    Button button3;
+    Button button4;
+    Button button5;
+    Button button6;
+    Button button7;
+    Button button8;
+    Button button9;
+    Button button0;
+    Button buttonAdd;
+    Button buttonSub;
+    Button buttonMul;
+    Button buttonDiv;
+    Button buttonPoint;
+
+
     String currentValue = "";
     int currentAction = 0; // 1 - сложение; 2 - вычитание; 3 - умножение; 4 - деление;
     Double arg1;
@@ -35,8 +51,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        initButtons();
         initClickListeners();
 
+    }
+
+    private void initButtons() {
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
+        button7 = findViewById(R.id.button7);
+        button8 = findViewById(R.id.button8);
+        button9 = findViewById(R.id.button9);
+        button0 = findViewById(R.id.button0);
+        buttonAdd = findViewById(R.id.buttonAdd);
+        buttonSub = findViewById(R.id.buttonSub);
+        buttonMul = findViewById(R.id.buttonMul);
+        buttonDiv = findViewById(R.id.buttonDiv);
+        buttonPoint = findViewById(R.id.buttonPoint);
     }
 
     private void initViews() {
@@ -49,251 +84,82 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initClickListeners(){
-        initButton1ClickListener();
-        initButton2ClickListener();
-        initButton3ClickListener();
-        initButton4ClickListener();
-        initButton5ClickListener();
-        initButton6ClickListener();
-        initButton7ClickListener();
-        initButton8ClickListener();
-        initButton9ClickListener();
-        initButton0ClickListener();
 
-        initButtonPointClickListener();
+        initButtonDigitClickListener(this.button0, valueButton0);
+        initButtonDigitClickListener(button1, valueButton1);
+        initButtonDigitClickListener(button2, valueButton2);
+        initButtonDigitClickListener(button3, valueButton3);
+        initButtonDigitClickListener(button4, valueButton4);
+        initButtonDigitClickListener(button5, valueButton5);
+        initButtonDigitClickListener(button6, valueButton6);
+        initButtonDigitClickListener(button7, valueButton7);
+        initButtonDigitClickListener(button8, valueButton8);
+        initButtonDigitClickListener(button9, valueButton9);
+        initButtonDigitClickListener(buttonPoint, valueButtonPoint);
 
-        initButtonAddClickListener();
-        initButtonSubClickListener();
-        initButtonMulClickListener();
-        initButtonDivClickListener();
+
+        initButtonActionClickListener(buttonAdd, 1);
+        initButtonActionClickListener(buttonSub, 2);
+        initButtonActionClickListener(buttonMul, 3);
+        initButtonActionClickListener(buttonDiv, 4);
 
         initButtonResultClickListener();
     }
-    private void initButton1ClickListener() {
-        Button button1 = findViewById(R.id.button1);
 
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton1);
-                currentValue = currentValue + valueButton1;
 
-            }
+    private void initButtonDigitClickListener(Button but, String valueButton) {
+        but.setOnClickListener(view -> {
+            setTextButton(currentValue + valueButton);
+            currentValue = currentValue + valueButton;
         });
     }
 
+    private void initButtonActionClickListener(Button but, int currentAct) {
 
-    private void initButton2ClickListener() {
-        Button button2 = findViewById(R.id.button2);
-
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton2);
-                currentValue = currentValue + valueButton2;
-            }
-        });
-    }
-
-    private void initButton3ClickListener() {
-        Button button3 = findViewById(R.id.button3);
-
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton3);
-                currentValue = currentValue + valueButton3;
-            }
-        });
-    }
-
-    private void initButton4ClickListener() {
-        Button button4 = findViewById(R.id.button4);
-
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton4);
-                currentValue = currentValue + valueButton4;
-            }
-        });
-    }
-
-    private void initButton5ClickListener() {
-        Button button5 = findViewById(R.id.button5);
-
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton5);
-                currentValue = currentValue + valueButton5;
-            }
-        });
-    }
-
-    private void initButton6ClickListener() {
-        Button button6 = findViewById(R.id.button6);
-
-        button6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton6);
-                currentValue = currentValue + valueButton6;
-            }
-        });
-    }
-
-    private void initButton7ClickListener() {
-        Button button7 = findViewById(R.id.button7);
-
-        button7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton7);
-                currentValue = currentValue + valueButton7;
-            }
-        });
-    }
-
-    private void initButton8ClickListener() {
-        Button button8 = findViewById(R.id.button8);
-
-        button8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton8);
-                currentValue = currentValue + valueButton8;
-            }
-        });
-    }
-
-    private void initButton9ClickListener() {
-        Button button9 = findViewById(R.id.button9);
-
-        button9.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton9);
-                currentValue = currentValue + valueButton9;
-            }
-        });
-    }
-
-    private void initButton0ClickListener() {
-        Button button0 = findViewById(R.id.button0);
-
-        button0.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButton0);
-                currentValue = currentValue + valueButton0;
-            }
-        });
-    }
-
-
-    private void initButtonPointClickListener() {
-        Button buttonPoint = findViewById(R.id.buttonPoint);
-
-        buttonPoint.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setTextButton(currentValue + valueButtonPoint);
-                currentValue = currentValue + valueButtonPoint;
-            }
-        });
-    }
-
-
-    private void initButtonAddClickListener() {
-        Button buttonAdd = findViewById(R.id.buttonAdd);
-
-        buttonAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                currentAction = 1;
-                arg1 = Double.parseDouble(currentValue);
-                currentValue = "";
-                setTextButton(currentValue);
-            }
-        });
-    }
-
-
-    private void initButtonSubClickListener() {
-        Button buttonSub = findViewById(R.id.buttonSub);
-
-        buttonSub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (currentValue.equals("")) {
+        but.setOnClickListener(view -> {
+            try {
+                if (currentValue.equals("")&& but.equals(buttonSub)) {
                     currentValue = "-";
-                    setTextButton(currentValue);
                 } else {
-                    currentAction = 2;
+                    currentAction = currentAct;
                     arg1 = Double.parseDouble(currentValue);
                     currentValue = "";
-                    setTextButton(currentValue);
                 }
-            }
-        });
-    }
-
-    private void initButtonMulClickListener() {
-        Button buttonMul = findViewById(R.id.buttonMul);
-
-        buttonMul.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                currentAction = 3;
-                arg1 = Double.parseDouble(currentValue);
-                currentValue = "";
                 setTextButton(currentValue);
             }
-        });
-    }
-
-    private void initButtonDivClickListener() {
-        Button buttonDiv = findViewById(R.id.buttonDiv);
-
-        buttonDiv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                currentAction = 4;
-                arg1 = Double.parseDouble(currentValue);
+            catch (Exception e) {
                 currentValue = "";
-                setTextButton(currentValue);
             }
+
         });
     }
+
+
 
     private void initButtonResultClickListener() {
         Button buttonResult = findViewById(R.id.buttonResult);
 
-        buttonResult.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (currentValue.equals("")) {
-                    setTextButton("0");
-                } else {
-                    arg2 = Double.parseDouble(currentValue);
-                    currentValue = "";
+        buttonResult.setOnClickListener(view -> {
+            if (currentValue.equals("")) {
+                setTextButton("0");
+            } else {
+                arg2 = Double.parseDouble(currentValue);
+                currentValue = "";
 
-                    switch (currentAction) {
-                        case 1: result = arg1 + arg2;
-                            break;
-                        case 2: result = arg1 - arg2;
-                            break;
-                        case 3: result = arg1 * arg2;
-                            break;
-                        case 4: result = arg1 / arg2;
-                            break;
-                        default: result = 0.0;
-                            break;
-                    }
-                    String res = Double.toString(result);
-                    setTextButton(res);
+                switch (currentAction) {
+                    case 1: result = arg1 + arg2;
+                        break;
+                    case 2: result = arg1 - arg2;
+                        break;
+                    case 3: result = arg1 * arg2;
+                        break;
+                    case 4: result = arg1 / arg2;
+                        break;
+                    default: result = 0.0;
+                        break;
                 }
+                String res = Double.toString(result);
+                setTextButton(res);
             }
         });
     }
