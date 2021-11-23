@@ -1,9 +1,11 @@
 package com.example.lesson2;
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonMul;
     Button buttonDiv;
     Button buttonPoint;
+    Button buttonSettings;
 
 
     String currentValue = "";
@@ -72,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMul = findViewById(R.id.buttonMul);
         buttonDiv = findViewById(R.id.buttonDiv);
         buttonPoint = findViewById(R.id.buttonPoint);
+        buttonSettings = findViewById(R.id.button_settings);
     }
 
     private void initViews() {
@@ -104,8 +108,16 @@ public class MainActivity extends AppCompatActivity {
         initButtonActionClickListener(buttonDiv, 4);
 
         initButtonResultClickListener();
+
+        initButtonSettingsClickListener();
     }
 
+    private void initButtonSettingsClickListener() {
+        buttonSettings.setOnClickListener(v -> {
+            Intent runSettings = new Intent (MainActivity.this, SettingsActivity.class);
+            startActivity(runSettings);
+        });
+    }
 
     private void initButtonDigitClickListener(Button but, String valueButton) {
         but.setOnClickListener(view -> {
@@ -133,8 +145,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
     }
-
-
 
     private void initButtonResultClickListener() {
         Button buttonResult = findViewById(R.id.buttonResult);
