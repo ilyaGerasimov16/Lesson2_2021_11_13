@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonMul;
     Button buttonDiv;
     Button buttonPoint;
+    Button buttonSettngs;
 
 
     String currentValue = "";
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         buttonMul = findViewById(R.id.buttonMul);
         buttonDiv = findViewById(R.id.buttonDiv);
         buttonPoint = findViewById(R.id.buttonPoint);
+        buttonSettngs = findViewById(R.id.button_settings);
     }
 
     private void initViews() {
@@ -104,8 +106,13 @@ public class MainActivity extends AppCompatActivity {
         initButtonActionClickListener(buttonDiv, 4);
 
         initButtonResultClickListener();
+
+        initButtonSettingsClickListener();
     }
 
+    private void initButtonSettingsClickListener() {
+
+    }
 
     private void initButtonDigitClickListener(Button but, String valueButton) {
         but.setOnClickListener(view -> {
