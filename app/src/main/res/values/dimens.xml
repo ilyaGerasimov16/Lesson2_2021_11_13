@@ -7,4 +7,6 @@
     <dimen name="button_height">60sp</dimen>
     <dimen name="min_height_TextView1">48dp</dimen>
     <dimen name="margin_TextView">10sp</dimen>
+    <dimen name="settings_textSize">20sp</dimen>
+    <dimen name="button_settingsMargin">20sp</dimen>
 </resources>

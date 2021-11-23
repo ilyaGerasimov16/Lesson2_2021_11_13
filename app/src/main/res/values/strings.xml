@@ -17,4 +17,5 @@
     <string name="button_mul">*</string>
     <string name="button_div">/</string>
     <string name="text_view1_hint">" 0"</string>
+    <string name="button_settingsText">Настройки</string>
 </resources>
