@@ -9,4 +9,7 @@
     <dimen name="margin_TextView">10sp</dimen>
     <dimen name="settings_textSize">20sp</dimen>
     <dimen name="button_settingsMargin">20sp</dimen>
+    <dimen name="margin_radioGroup">32dp</dimen>
+    <dimen name="margin_buttonReturn">32dp</dimen>
+    <dimen name="settings_textSizeView">20sp</dimen>
 </resources>

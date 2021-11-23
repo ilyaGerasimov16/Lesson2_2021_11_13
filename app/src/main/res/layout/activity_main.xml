@@ -16,8 +16,7 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
@@ -26,8 +25,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button3"
         app:layout_constraintStart_toEndOf="@+id/button1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintVertical_chainStyle="packed"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button3"
@@ -36,8 +34,7 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonAdd"
         app:layout_constraintStart_toEndOf="@+id/button2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintVertical_chainStyle="packed"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button4"
@@ -46,8 +43,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button1"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button5"
@@ -55,8 +51,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toStartOf="@+id/button6"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
@@ -64,8 +59,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button9"
         app:layout_constraintEnd_toStartOf="@+id/buttonSub"
         app:layout_constraintStart_toEndOf="@+id/button5"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button3"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button7"
@@ -74,8 +68,7 @@
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button8"
@@ -83,8 +76,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonPoint"
         app:layout_constraintEnd_toStartOf="@+id/button9"
         app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button9"
@@ -92,8 +84,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonResult"
         app:layout_constraintEnd_toStartOf="@+id/buttonMul"
         app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toBottomOf="@+id/button6"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button0"
@@ -102,8 +93,7 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonPoint"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button7"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonPoint"
@@ -111,8 +101,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonResult"
         app:layout_constraintStart_toEndOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/button8"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonResult"
@@ -121,8 +110,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonDiv"
         app:layout_constraintStart_toEndOf="@+id/buttonPoint"
-        app:layout_constraintTop_toBottomOf="@+id/button9"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/button9" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonAdd"
@@ -132,8 +120,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSub"
@@ -142,8 +129,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonMul"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAdd"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonAdd" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonMul"
@@ -152,8 +138,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonDiv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button9"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSub"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonSub" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonDiv"
@@ -162,8 +147,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonResult"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMul"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonMul" />
 
     <TextView
         android:id="@+id/textView1"
@@ -177,8 +161,7 @@
         android:textSize="@dimen/textSizeView"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="@+id/buttonAdd"
-        app:layout_constraintStart_toStartOf="@+id/button1"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintStart_toStartOf="@+id/button1" />
 
 
     <Button
@@ -189,8 +172,7 @@
         android:textSize="@dimen/settings_textSize"
         android:layout_margin="@dimen/button_settingsMargin"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        style="@style/MyCalcStyle"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

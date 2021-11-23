@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Lesson2</string>
+    <string name="app_name">My_Calculator</string>
     <string name="button_1" translatable="false">1</string>
     <string name="button_2" translatable="false">2</string>
     <string name="button_3" translatable="false">3</string>
@@ -18,4 +18,10 @@
     <string name="button_div" translatable="false">/</string>
     <string name="text_view1_hint" translatable="false">" 0"</string>
     <string name="button_settingsText">Settings</string>
+
+    <string name="my_cool_style">My cool style</string>
+    <string name="material_light">Material light</string>
+    <string name="material_light_action_bar_dark">Material light action bar dark</string>
+    <string name="material_dark">Material dark</string>
+    <string name="button_textReturn">Return</string>
 </resources>
